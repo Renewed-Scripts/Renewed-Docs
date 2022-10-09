@@ -1,8 +1,10 @@
+---
+description: Welcome to Renewed-Fuel a complete reworked fuel system.
+---
+
 # ⛽ Renewed Fuel
 
 Advanced Fuel System for QBCore
-
-
 
 Preview \*Coming Soon\*
 
@@ -15,13 +17,14 @@ Preview \*Coming Soon\*
 * Fully Secured All Events, With Advanced Level Anti-Cheat Protection On Assets
 * Single YMAP For Prop Management Throughout The Resource
 * Heavily Tested Across Many Servers To Ensure A Bug-Free Release
+* Configurable integration with Renewed-Banking
 
 #### Gas Stations
 
 * Advanced Player Owned Gas Station System
 * Unlimited Gas Stations
 * Gas Station Upgrades such as (Safety, Storage and Refuel Speed)
-* Business Manager Controlled Fuel Pricing&#x20;
+* Business Manager Controlled Fuel Pricing
 * Standalone Gas Business Management System(Employee/Society/Fuel)
 
 #### Oil Rigs
@@ -34,7 +37,7 @@ Preview \*Coming Soon\*
 
 #### Oil Field
 
-* Oil Field, comes with props where you infuse the crude oil with gasses to make Gasoline&#x20;
+* Oil Field, comes with props where you infuse the crude oil with gasses to make Gasoline
 * Configurable Recipes to deter main the Crude oil to Gasoline rates
 * Player Storages for their gasoline
 * Players can extract their gasoline into barrels to sell to the player owned gas stations

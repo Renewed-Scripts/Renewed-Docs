@@ -1,3 +1,7 @@
+---
+description: This page will give you a brief overlook on how to install this resource
+---
+
 # 📄 How to Install
 
 {% hint style="info" %}
