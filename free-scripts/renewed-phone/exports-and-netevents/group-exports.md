@@ -1,5 +1,5 @@
 ---
-description: All the following exports are SERVER SIDED ONL
+description: All the following exports are SERVER SIDED ONLY
 ---
 
 # 👨❤👨 Group Exports
@@ -92,8 +92,6 @@ exports['qb-phone']:RemoveBlipForGroup(group, name)
 local group = exports['qb-phone']:GetGroupByMembers(src)
 exports['qb-phone']:RemoveBlipForGroup(group, "Garbage")
 ```
-
-
 
 ## Job Status
 

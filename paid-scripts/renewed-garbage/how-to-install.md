@@ -23,7 +23,7 @@ Step 3 can be skipped if u do not wish to use material vouchers
 * Add the following to your qb-core/shared/items.lua
 
 ```lua
-['matticket']					 = {['name'] = 'matticket', 					['label'] = 'Material Voucher',			 ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'matticket.png', 			['unique'] = false,		['useable'] = false, 	['shouldClose'] = false,	   ['combinable'] = nil,   ['description'] = 'Turn this in at sanitation to be rewarded with some scrapped material',
+['matticket']					 = {['name'] = 'matticket', 					['label'] = 'Material Voucher',			 ['weight'] = 100, 		['type'] = 'item', 		['image'] = 'matticket.png', 			['unique'] = false,		['useable'] = false, 	['shouldClose'] = false,	   ['combinable'] = nil,   ['description'] = "Turn this in at sanitation to be rewarded with some scrapped material"},
 ```
 
 * Now head over to your inventory and put in the matticket.png to your qb-inventory/html/images folder
