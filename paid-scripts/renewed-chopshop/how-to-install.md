@@ -7,6 +7,11 @@ description: This page will give you a brief overlook on how to install this res
 ### Step 1
 
 * Download the latest version of Renewed-Chopshop from Keymaster and put ensure Renewed-Chopshop in your server.cfg
+*   uncomment ox lib from the fxmanifest like shown below
+
+    ```lua
+    --'@ox_lib/init.lua'
+    ```
 
 ### Step 2
 
