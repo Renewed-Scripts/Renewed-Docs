@@ -2,9 +2,11 @@
 
 ### GetPlayerCarryItems
 
-<pre><code><strong>exports["Renewed-Weaponscarry"]:GetPlayerCarryItems()
-</strong>
-Returns a table of all the items the player is carrying</code></pre>
+```
+exports["Renewed-Weaponscarry"]:GetPlayerCarryItems()
+
+Returns a table of all the items the player is carrying
+```
 
 ### toggleProps
 
@@ -22,7 +24,6 @@ exports["Renewed-Weaponscarry"]:refreshProps()
 
 Refreshes the props for the player toggle this at at the END of your refreshskin events
 to make sure the props get removed and refreshed the proper way
-
 ```
 
 ### isCarryingObject

@@ -13,6 +13,14 @@
   * [📄 How to install](paid-scripts/renewed-deliveries/how-to-install.md)
 * [🚙 Renewed Chopshop](paid-scripts/renewed-chopshop/README.md)
   * [📄 How to Install](paid-scripts/renewed-chopshop/how-to-install.md)
+* [🏪 Renewed Businesses](paid-scripts/renewed-businesses/README.md)
+  * [🍽 Configured Businesses](paid-scripts/renewed-businesses/configured-businesses.md)
+  * [📄 Installation](paid-scripts/renewed-businesses/installation/README.md)
+    * [🛠 Ox Inventory Changes](paid-scripts/renewed-businesses/installation/ox-inventory-changes.md)
+    * [📚 Items Installation](paid-scripts/renewed-businesses/installation/items-installation.md)
+  * [📚 Documentation](paid-scripts/renewed-businesses/documentation/README.md)
+    * [📃 Example Config](paid-scripts/renewed-businesses/documentation/example-config.md)
+    * [📃 Empty Config](paid-scripts/renewed-businesses/documentation/empty-config.md)
 
 ## Free Scripts
 
