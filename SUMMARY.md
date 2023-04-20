@@ -19,6 +19,7 @@
     * [🛠 Ox Inventory Changes](paid-scripts/renewed-businesses/installation/ox-inventory-changes.md)
     * [📚 Items Installation](paid-scripts/renewed-businesses/installation/items-installation.md)
   * [📚 Documentation](paid-scripts/renewed-businesses/documentation/README.md)
+    * [🥔 Ingredient shop](paid-scripts/renewed-businesses/documentation/ingredient-shop.md)
     * [📃 Example Config](paid-scripts/renewed-businesses/documentation/example-config.md)
     * [📃 Empty Config](paid-scripts/renewed-businesses/documentation/empty-config.md)
 
