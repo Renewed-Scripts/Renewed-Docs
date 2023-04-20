@@ -35,6 +35,6 @@
 * [📚 Renewed Lib](free-scripts/renewed-lib/README.md)
   * [💽 Server](free-scripts/renewed-lib/server/README.md)
     * [Functions](free-scripts/renewed-lib/server/functions.md)
-  * [Client](free-scripts/renewed-lib/client/README.md)
+  * [📃 Client](free-scripts/renewed-lib/client/README.md)
     * [Functions](free-scripts/renewed-lib/client/functions.md)
     * [Events](free-scripts/renewed-lib/client/events.md)

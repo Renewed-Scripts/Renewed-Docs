@@ -24,7 +24,7 @@ Introducing the ultimate restaurant management experience in FiveM with our all-
 
 ### Dependencies
 
-* Renewed Lib
+* [Renewed Lib](https://github.com/Renewed-Scripts/Renewed-Lib)&#x20;
 * [Ox Lib](https://github.com/overextended/ox\_lib)
 * [Ox Inventory](https://github.com/overextended/ox\_inventory)
 * [Esx](https://github.com/esx-framework/esx\_core) or [QBCore](https://github.com/qbcore-framework/qb-core) or [QBox](https://github.com/Qbox-project/qbx-core)
