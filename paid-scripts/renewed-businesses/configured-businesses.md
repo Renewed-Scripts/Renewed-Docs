@@ -11,6 +11,8 @@ description: >-
 * [Gabz Up'n Atom](https://fivem.gabzv.com/package/5567767)
 * [Gabz Pizzeria](https://fivem.gabzv.com/package/4724795)
 * [Gabz Horny's](https://fivem.gabzv.com/package/5567769)
+* [Gabz Pearls](https://fivem.gabzv.com/package/5665527)
+* [Gabz Koi](https://fivem.gabzv.com/package/5665526)
 * [G\&N's Burgershot](https://gnstud.io/products/burgershot)
 * GTA Interior: Tequilala
 
