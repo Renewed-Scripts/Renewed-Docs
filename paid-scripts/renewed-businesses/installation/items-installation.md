@@ -1758,7 +1758,7 @@ description: >-
 	foodType = 'drink',
 	nutrition = {
 		alcohol = 5,
-		thrist = 3,
+		thirst = 3,
 	},
 },
 
@@ -1770,7 +1770,7 @@ description: >-
 	foodType = 'drink',
 	nutrition = {
 		alcohol = 5,
-		thrist = 3,
+		thirst = 3,
 	},
 },
 
@@ -1782,7 +1782,7 @@ description: >-
 	foodType = 'drink',
 	nutrition = {
 		alcohol = 5,
-		thrist = 3,
+		thirst = 3,
 	},
 },
 
@@ -1794,7 +1794,7 @@ description: >-
 	foodType = 'drink',
 	nutrition = {
 		alcohol = 5,
-		thrist = 3,
+		thirst = 3,
 	},
 },
 
@@ -1806,7 +1806,7 @@ description: >-
 	foodType = 'drink',
 	nutrition = {
 		alcohol = 5,
-		thrist = 3,
+		thirst = 3,
 	},
 },
 
@@ -1818,7 +1818,7 @@ description: >-
 	foodType = {'food', 'drink'},
 	nutrition = {
 		alcohol = 5,
-		thrist = 3,
+		thirst = 3,
 		hunger = 2
 	},
 },
@@ -1831,7 +1831,7 @@ description: >-
 	foodType = 'drink',
 	nutrition = {
 		alcohol = 5,
-		thrist = 3,
+		thirst = 3,
 	},
 },
 
@@ -1842,7 +1842,7 @@ description: >-
 	price = 10,   
 	foodType = 'drink',
 	nutrition = {
-		thrist = 7,
+		thirst = 7,
 	},
 },
 ```

@@ -6,7 +6,7 @@ Introducing the ultimate restaurant management experience in FiveM with our all-
 
 * Support for ESX and QBCore (all framework files are unescrowed)
 * Support for qb-management/esx society/Renewed Banking
-* Los resmon (0.00ms / 0.01 ms server and client)
+* Low Resmon (0.00ms / 0.01 ms server and client)
 * Store owners can create their own items
 * Store owners can create their own unique recipe's for items
 * Offline Support for items to be sold at restaurant if/when no worker is nearby
