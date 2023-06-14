@@ -129,18 +129,60 @@ end)
 
 ### Step 3
 
-Now head over to ox\_inventory/modules/crafting/server.lua
-
-Here you want to put the following under createCraftingBench function
+Now head over to ox\_inventory/modules/crafting/server.lua and find this function
 
 ```lua
+function createCraftingBench
+```
+
+
+
+Now replace that function with this
+
+```lua
+local function createCraftingBench(id, data)
+	CraftingBenches[id] = {}
+	local recipes = data.items
+	local amount = #recipes
+
+	if recipes and amount > 0 then
+		for i = 1, amount do
+			local recipe = recipes[i]
+			local item = Items(recipe.name)
+
+			if item then
+				recipe.weight = item.weight
+				recipe.slot = i
+			else
+				warn(('failed to setup crafting recipe (bench: %s, slot: %s) - item "%s" does not exist'):format(id, i, recipe.name))
+			end
+
+			for ingredient, needs in pairs(recipe.ingredients) do
+				if needs < 1 then
+					item = Items(ingredient)
+
+					if item and not item.durability then
+						item.durability = true
+					end
+				end
+			end
+		end
+
+		if shared.target then
+			data.points = nil
+		else
+			data.zones = nil
+		end
+
+		data.slots = amount
+
+		CraftingBenches[id] = data
+	end
+end
 exports('RegisterCraftStation', createCraftingBench)
 ```
 
-&#x20;It should look like this\
-
-
-<figure><img src="../../../.gitbook/assets/Code_NuHYB3qrPx.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>This is what a the function will look like when successfully installed</p></figcaption></figure>
 
 ### Step 4
 
