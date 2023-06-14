@@ -84,8 +84,7 @@ Remain in ox\_inventory/client.lua and search for the following around line 1630
 'ox_inventory:startCrafting'
 ```
 
-Here you want to replace this\
-
+Here you want to replace this
 
 ```lua
 lib.callback.register('ox_inventory:startCrafting', function(id, recipe)
@@ -134,8 +133,6 @@ Now head over to ox\_inventory/modules/crafting/server.lua and find this functio
 ```lua
 function createCraftingBench
 ```
-
-
 
 Now replace that function with this
 
