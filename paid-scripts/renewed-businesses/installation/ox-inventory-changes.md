@@ -140,9 +140,9 @@ Now replace that function with this
 local function createCraftingBench(id, data)
 	CraftingBenches[id] = {}
 	local recipes = data.items
-	local amount = #recipes
+	local amount = recipes and #recipes or 0
 
-	if recipes and amount > 0 then
+	if amount > 0 then
 		for i = 1, amount do
 			local recipe = recipes[i]
 			local item = Items(recipe.name)
@@ -176,15 +176,15 @@ local function createCraftingBench(id, data)
 		CraftingBenches[id] = data
 	end
 end
+
 exports('RegisterCraftStation', createCraftingBench)
 ```
 
-<figure><img src="../../../.gitbook/assets/image.png" alt=""><figcaption><p>This is what a the function will look like when successfully installed</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1).png" alt=""><figcaption><p>This is what the function should look like when successfully installed.</p></figcaption></figure>
 
 ### Step 4
 
-Within the same file (modules/crafting/server.lua) find the following event\
-
+Stay inside ox\_inventory/modules/crafting/server.lua and find this event
 
 ```lua
 lib.callback.register('ox_inventory:openCraftingBench', function(source, id, index)
@@ -217,7 +217,7 @@ lib.callback.register('ox_inventory:openCraftingBench', function(source, id, ind
 end)
 ```
 
-and replace it with the following
+Then replace the event with the following code
 
 ```lua
 lib.callback.register('ox_inventory:openCraftingBench', function(source, id, index)
@@ -258,10 +258,10 @@ In the same file (modules/crafting/server.lua) find the following event
 local success = lib.callback.await('ox_inventory:startCrafting', source, id, recipeId)
 ```
 
-replace this with the following
+Replace that event / code with this
 
 ```lua
 local success = lib.callback.await('ox_inventory:startCrafting', source, recipe)
 ```
 
-and that is it, you have now completed the inventory changes!
+Once completed you have now successfully installed Renewed-Businesses!
