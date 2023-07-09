@@ -22,6 +22,9 @@
     * [🥔 Ingredient shop](paid-scripts/renewed-businesses/documentation/ingredient-shop.md)
     * [📃 Example Config](paid-scripts/renewed-businesses/documentation/example-config.md)
     * [📃 Empty Config](paid-scripts/renewed-businesses/documentation/empty-config.md)
+* [🌱 Renewed Weed](paid-scripts/renewed-weed/README.md)
+  * [📚 Configs](paid-scripts/renewed-weed/configs.md)
+  * [📄 Installation](paid-scripts/renewed-weed/installation.md)
 
 ## Free Scripts
 
