@@ -1,6 +1,10 @@
-# 🌱 Renewed Weed
+---
+description: >-
+  Introducing Renewed Weed! A completely reworked and reimagined way of growing
+  and packing your weed!
+---
 
-Introducing Renewed Weed! A completely reworked and reimagined way of growing and packing your weed!
+# 🌱 Renewed Weed
 
 ### Features
 
@@ -40,3 +44,8 @@ Introducing Renewed Weed! A completely reworked and reimagined way of growing an
 * [ox\_lib](https://github.com/overextended/ox\_lib) (3.6 or higher)&#x20;
 * ox\_target (any version)
 
+### Code Amount
+
+**1700** Lines without Config and Locales
+
+**2100** Lines with Config and Locales

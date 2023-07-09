@@ -1,5 +1,5 @@
 ---
-description: Here you will see all possible Configs
+description: Everything that is configurable in Renewed Weed!
 ---
 
 # 📚 Configs
@@ -54,7 +54,9 @@ return {
         fertilizer = 'fertilizer',
         emptybag = 'emptybag',
         fullbag = 'fullbag',
-        weedbrick = 'weedbrick'
+        weedbrick = 'weedbrick',
+        scale = 'scale',
+        wetweed = "wetweed"
     },
 
     -- Placement Config --

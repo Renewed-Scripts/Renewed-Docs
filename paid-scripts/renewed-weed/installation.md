@@ -1,3 +1,9 @@
+---
+description: >-
+  Here you will get a brief and precise tutorial on how to install Renewed Weed
+  for your server!
+---
+
 # 📄 Installation
 
 ### Step 1
@@ -15,7 +21,7 @@
 },
 
 ['male_seed'] = {
-	label = 'Female Seed',
+	label = 'Male Seed',
 	weight = 1,
 	client = {
 		image = 'weed_seed.png'
@@ -30,7 +36,7 @@
 },
 
 ['driedweed'] = {
-	label = 'Dried Weed',
+	label = 'Dry Bud',
 	weight = 50,
 	buttons = {
 		{
