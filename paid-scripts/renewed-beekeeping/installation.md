@@ -12,24 +12,28 @@ Headover to ox\_inventory/data/items.lua and paste in these items. Adjust the we
 ['beehive'] = {
 	label = 'Bee Hive',
 	weight = 1000,
+	description = 'A wooden beehive used for beekeeping. Handle with care!',
 	client = {
 		export = 'Renewed-Beekeeping.placeHive',
 	}
 },
 
 ['beewax'] = {
-	label = 'Bee Wax',
-	weight = 250
+	label = 'Bees Wax',
+	weight = 250,
+	description = 'Pure, golden beeswax obtained from beehives. It has various uses.',
 },
 
 ['emptyjar'] = {
 	label = 'Empty Jar',
-	weight = 50
+	weight = 50,
+	description = 'A glass jar with no contents. Can be used for storage or crafting.',
 },
 
 ['honeyjar'] = {
 	label = 'Honey Jar',
-	weight = 200
+	weight = 200,
+	description = 'A jar filled with delicious, golden honey. A sweet treat!',
 },
 ```
 
