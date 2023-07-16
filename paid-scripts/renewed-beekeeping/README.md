@@ -8,7 +8,7 @@ description: >-
 
 ### Features
 
-* Mutliple states (full/filling), with prop support
+* Multiple states (full/filling), with prop support
 * [NoPixel props](https://3dstore.nopixel.net/package/5622378) support&#x20;
 * Configurable props (if you use a different beekeeper prop you can change that in the config)
 * Entity lockdown support (all props are spawned non networked client side)

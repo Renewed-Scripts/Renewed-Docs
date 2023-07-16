@@ -6,7 +6,7 @@ Run the sql file 'runme.sql'
 
 ## Step 2
 
-Headover to ox\_inventory/data/items.lua and paste in these items. Adjust the weights etc. to your liking
+Head over to ox\_inventory/data/items.lua and paste in these items. Adjust the weights etc. to your liking
 
 ```lua
 ['beehive'] = {
@@ -39,7 +39,7 @@ Headover to ox\_inventory/data/items.lua and paste in these items. Adjust the we
 
 ## Step 3
 
-Headover to ox\_inventory/web/images and paste in the images from Renewed-Beekeeping/images
+Head over to ox\_inventory/web/images and paste in the images from Renewed-Beekeeping/images
 
 
 
