@@ -7,12 +7,6 @@
 * [⛽ Renewed Fuel](paid-scripts/renewed-fuel/README.md)
   * [📄 How to Install](paid-scripts/renewed-fuel/how-to-install.md)
   * [🔵 Exports](paid-scripts/renewed-fuel/exports.md)
-* [🪣 Renewed-Garbage](paid-scripts/renewed-garbage/README.md)
-  * [📄 How to install](paid-scripts/renewed-garbage/how-to-install.md)
-* [🚚 Renewed Deliveries](paid-scripts/renewed-deliveries/README.md)
-  * [📄 How to install](paid-scripts/renewed-deliveries/how-to-install.md)
-* [🚙 Renewed Chopshop](paid-scripts/renewed-chopshop/README.md)
-  * [📄 How to Install](paid-scripts/renewed-chopshop/how-to-install.md)
 * [🏪 Renewed Businesses](paid-scripts/renewed-businesses/README.md)
   * [🍽 Configured Businesses](paid-scripts/renewed-businesses/configured-businesses.md)
   * [📄 Installation](paid-scripts/renewed-businesses/installation/README.md)
@@ -25,6 +19,15 @@
 * [🌱 Renewed Weed](paid-scripts/renewed-weed/README.md)
   * [📚 Configs](paid-scripts/renewed-weed/configs.md)
   * [📄 Installation](paid-scripts/renewed-weed/installation.md)
+* [🐝 Renewed Beekeeping](paid-scripts/renewed-beekeeping/README.md)
+  * [📚 Configs](paid-scripts/renewed-beekeeping/configs.md)
+  * [📄 Installation](paid-scripts/renewed-beekeeping/installation.md)
+* [🪣 Renewed-Garbage](paid-scripts/renewed-garbage/README.md)
+  * [📄 How to install](paid-scripts/renewed-garbage/how-to-install.md)
+* [🚚 Renewed Deliveries](paid-scripts/renewed-deliveries/README.md)
+  * [📄 How to install](paid-scripts/renewed-deliveries/how-to-install.md)
+* [🚙 Renewed Chopshop](paid-scripts/renewed-chopshop/README.md)
+  * [📄 How to Install](paid-scripts/renewed-chopshop/how-to-install.md)
 
 ## Free Scripts
 
