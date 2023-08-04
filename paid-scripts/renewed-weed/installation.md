@@ -143,7 +143,7 @@ function Items.UpdateDurability(inv, slot, item, value, ostime)
 		if success and slot.name == 'wetweed' then
 			local weight = slot.metadata?.weight or 100
 			local amount = math.floor(weight / 100)
-			Inventory.AddItem(inv, 'driedweed', amount, { strain = slot.metadata?.strain, strainQuality = slot.metadata?.strainQuality }, slot.slot)
+			success = Inventory.AddItem(inv, 'driedweed', amount, { strain = slot.metadata?.strain, strainQuality = slot.metadata?.strainQuality }, slot.slot)
 		end
 
 		return success
