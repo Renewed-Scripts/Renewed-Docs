@@ -36,6 +36,7 @@ description: >-
 ### Dependencies
 
 * [ox\_inventory](https://github.com/overextended/ox\_inventory) (2.31.3 or higher)
+* [NP Props](https://3dstore.nopixel.net/package/5622378)
 * [Renewed-Lib](https://github.com/Renewed-Scripts/Renewed-Lib) (1.1 or higher)
 * [ox\_lib](https://github.com/overextended/ox\_lib) (3.6 or higher)&#x20;
 * ox\_target (any version)
