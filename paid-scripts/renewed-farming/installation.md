@@ -17,6 +17,11 @@
     },
 },
 
+['wateringcan'] = {
+    label = 'Watering Can',
+    weight = 0,
+},
+
 ['beetroot'] = {
     label = 'Beetroot',
     description = 'Freshly harvested beetroot, perfect for cooking or adding to salads.',
