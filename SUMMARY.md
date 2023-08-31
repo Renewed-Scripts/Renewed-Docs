@@ -28,6 +28,7 @@
 * [🗝 Renewed Vehiclekeys](paid-scripts/renewed-vehiclekeys/README.md)
   * [📚 Config](paid-scripts/renewed-vehiclekeys/config.md)
   * [📃 Installation](paid-scripts/renewed-vehiclekeys/installation.md)
+  * [🚙 Exports](paid-scripts/renewed-vehiclekeys/exports.md)
 * [🐝 Renewed Beekeeping](paid-scripts/renewed-beekeeping/README.md)
   * [📚 Configs](paid-scripts/renewed-beekeeping/configs.md)
   * [📄 Installation](paid-scripts/renewed-beekeeping/installation.md)
