@@ -1,31 +1,61 @@
-# 🔵 Exports
-
-
+# 🔵 Setters and Getters
 
 {% hint style="info" %}
-This page is for developers who want to utilize some of ours functions and exports within their scripts
+This page is for developers who want to implement Renewed-Fuel within their resources.
 {% endhint %}
 
-### GetFuel
+## Getters
 
-This export will return the amount of fuel the given vehicle has. Look below for an example
+### Client
 
+Statebag: Entity(vehicleId).state.fuel
+
+```lua
+local vehicle = cache.vehicle -- Ox Lib example
+local fuel = Entity(vehicle).state.fuel
+
+-- Optimized way (Use this if you need to get vehicle fuels in LOOPS)
+local function enteredCar()
+    local vehicle = cahe.vehicle
+    local state = Entity(vehicle).state
+    while true do
+        print(state.fuel)
+    end
+end
 ```
-GetFuel(Vehicle: entity)
 
-local vehicle = QBCore.Functions.GetClosestVehicle()
-local fuel = exports['Renewed-Fuel']:GetFuel(vehicle)
-print(fuel) -- Prints the amount of fuel the closest vehicle has.
+Export: exports\['Renewed-Fuel']:GetFuel(vehicleId) -- (Not recommended)
+
+```lua
+local fuel = exports['Renewed-Fuel']:GetFuel(cache.vehicle) -- ox lib example
 ```
 
-### SetFuel (CLIENT AND SERVER EXPORT)
+### Server
 
-This export is used for setting the fuel in vehicles, please use the below example to implement it into your scripts!
+Statebag: Entity(vehicleId).state.fuel
 
+```lua
+local vehicle = GetVehiclePedIsIn(GetPlayerPed(source))
+local fuel = Entity(vehicle).state.fuel
 ```
-SetFuel(Vehicle: entity, Fuel: number)
 
-local vehicle = QBCore.Functions.GetClosestVehicle()
-exports['Renewed-Fuel']:SetFuel(vehicle, 100) -- Sets the closest vehicle Fuel to 100
+## Setters
+
+### Client
+
+Export: exports\['Renewed-Fuel']:SetFuel(vehicleId)
+
+```lua
+exports['Renewed-Fuel']:SetFuel(cache.vehicle, amount, fuelType) 
+-- fueltype defaults to 86 if nil
+```
+
+### &#x20;Server
+
+Export: exports\['Renewed-Fuel']:SetFuel(vehicleId)
+
+```lua
+local vehicle = GetVehiclePedIsIn(GetPlayerPed(source))
+exports['Renewed-Fuel']:SetFuel(vehicle, amount, fuelType) 
 ```
 

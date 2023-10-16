@@ -18,7 +18,7 @@ Make sure to follow all steps step by step, if you encounter errors please reche
 * Insert Renewed-Fuel into your server
 * Remember to Ensure Renewed-Fuel in your server.cfg
 
-### Step 3
+### Step 3 (Optional if you used ps/cdn/qb/jl/Legacy Fuel)
 
 * Open your Entire server in Visual Studio Code
 * Now do a folder search for LegacyFuel (Or any other fuel script you used prior)
@@ -26,45 +26,47 @@ Make sure to follow all steps step by step, if you encounter errors please reche
 
 ### Step 4
 
-* Head over to your qb-core folder inside your resources
-* Here headover to the shared folder and find items.lua
-* Paste following code whereever you like within the QBCore.Shared table
+* Now open ox\_inventory and insert the following items into ox\_inventory/data/items.lua
 
+```lua
+oilbarrel = {
+	label = 'Oil Barrel',
+	stack = false,
+	weight = 0,
+},
+
+driveshaft = {
+	label = 'Drive Shaft',
+	weight = 1000,
+	stack = false
+},
+
+oilfilter = {
+	label = 'Oil Filter',
+	weight = 1000,
+	stack = false
+},
+
+reliefstring = {
+	label = 'Relief String',
+	weight = 1000,
+	stack = false
+},
+
+skewgear = {
+	label = 'Skew Gear',
+	weight = 1000,
+	stack = false
+},
+
+timingchain = {
+	label = 'Timing Chain',
+	weight = 1000,
+	stack = false
+},
 ```
-['oil_barrel'] 	 = {['name'] = 'oil_barrel', 	['label'] = 'Oil Barrel', 	['weight'] = 80000, 	['type'] = 'item', 	['image'] = 'oil_barrel.png', 	['unique'] = true, 	['useable'] = false, 	['shouldClose'] = false,   ['combinable'] = nil,   ['description'] = 'A barrel used to store types of oil'},
-```
 
-### Step 5
+* now insert the images from Renewed-Fuel into ox\_inventory/web/images folder.
 
-* Head over to your qb-inventory (Or any other inventory)
-* Paste the oil\_barrel.png into your html/images
+And that is all for installation!
 
-### Step 6 (Optional)
-
-These steps is needed if you want the oil barrel to show the current Gasoline inside them
-
-* Headover to your qb-inventory/html/js/app.js
-* Now search for harness and it should look like
-
-```
-else if (itemData.name == "harness") {
-    $(".item-info-title").html("<p>" + itemData.label + "</p>");
-    $(".item-info-description").html(
-        "<p>" + itemData.info.uses + " uses left.</p>"
-    );
-}
-```
-
-* now replace that code with this
-
-```
-else if (itemData.name == "harness") {
-    $(".item-info-title").html("<p>" + itemData.label + "</p>");
-    $(".item-info-description").html(
-        "<p>" + itemData.info.uses + " uses left.</p>"
-    );
-} else if (itemData.name == "oil_barrel") {
-    $(".item-info-title").html('<p>' + itemData.label + '</p>')
-    $(".item-info-description").html('<p>' + itemData.info.gas + ' / 5000 Gallons left.</p>');
-}
-```
