@@ -7,6 +7,7 @@
 * [⛽ Renewed Fuel](paid-scripts/renewed-fuel/README.md)
   * [📄 How to Install](paid-scripts/renewed-fuel/how-to-install.md)
   * [⛽ How to create stations](paid-scripts/renewed-fuel/how-to-create-stations.md)
+  * [🛢 How to create Oil Rigs](paid-scripts/renewed-fuel/how-to-create-oil-rigs.md)
   * [🔵 Setters and Getters](paid-scripts/renewed-fuel/exports.md)
 * [🏪 Renewed Businesses](paid-scripts/renewed-businesses/README.md)
   * [🍽 Configured Businesses](paid-scripts/renewed-businesses/configured-businesses.md)
