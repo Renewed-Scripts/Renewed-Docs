@@ -19,6 +19,7 @@ Preview \*Coming Soon\*
 * Able to have a driver and someone fuel the vehicle at the same time.
 * Chance for vehicles to blow up IF being refilled while engine is running.
 * Fully synced Nozzles and Ropes
+* Support Jerrycans and backwards compatible with most ox\_inventory jerrycan resources like ox\_fuel.
 
 #### Gas Stations
 
