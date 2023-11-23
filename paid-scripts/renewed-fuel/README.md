@@ -47,3 +47,12 @@ Preview \*Coming Soon\*
 * Configurable recipes to deter main rates and gasoline types
 * Able to extract gasolines into barrels to be used for gas stations
 * Synced sounds for player making fuel
+
+### Dependencies
+
+* Ox Lib
+* Ox target
+* Ox Inventory
+* OxMysql
+* Renewed Lib
+* QBCore/QBox/ESX/Ox\_core

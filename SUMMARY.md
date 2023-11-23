@@ -9,6 +9,8 @@
   * [⛽ How to create stations](paid-scripts/renewed-fuel/how-to-create-stations.md)
   * [🛢 How to create Oil Rigs](paid-scripts/renewed-fuel/how-to-create-oil-rigs.md)
   * [🔵 Setters and Getters](paid-scripts/renewed-fuel/exports.md)
+  * [🛢 Petrol Cans](paid-scripts/renewed-fuel/petrol-cans/README.md)
+    * [📃 Ox Inventory Edits](paid-scripts/renewed-fuel/petrol-cans/ox-inventory-edits.md)
 * [🏪 Renewed Businesses](paid-scripts/renewed-businesses/README.md)
   * [🍽 Configured Businesses](paid-scripts/renewed-businesses/configured-businesses.md)
   * [📄 Installation](paid-scripts/renewed-businesses/installation/README.md)
