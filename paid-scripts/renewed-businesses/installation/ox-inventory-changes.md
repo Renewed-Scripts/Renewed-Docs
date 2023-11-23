@@ -180,7 +180,7 @@ end
 exports('RegisterCraftStation', createCraftingBench)
 ```
 
-<figure><img src="../../../.gitbook/assets/image (1) (1).png" alt=""><figcaption><p>This is what the function should look like when successfully installed.</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/image (1) (1) (1).png" alt=""><figcaption><p>This is what the function should look like when successfully installed.</p></figcaption></figure>
 
 ### Step 4
 
