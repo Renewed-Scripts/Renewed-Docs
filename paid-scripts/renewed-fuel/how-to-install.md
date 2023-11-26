@@ -68,5 +68,10 @@ timingchain = {
 
 * now insert the images from Renewed-Fuel into ox\_inventory/web/images folder.
 
+### Step 5 (optional)
+
+* If you want to use native audio for when picking/putting nozzles and fueling vehicles download this resource: [https://github.com/Renewed-Scripts/Renewed-Audiobank](https://github.com/Renewed-Scripts/Renewed-Audiobank)
+* Make sure to start it in the server.cfg before Renewed-Fuel
+
 And that is all for installation!
 
