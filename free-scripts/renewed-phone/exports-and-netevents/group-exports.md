@@ -4,27 +4,35 @@ description: All the following exports are SERVER SIDED ONLY
 
 # 👨❤👨 Group Exports
 
+{% hint style="info" %}
+Here you can find all exports related to Groups within the phone!
+{% endhint %}
+
 ## Utility Exports
 
 ### NotifyGroup
 
 ```
-An export used to Notify the entire group about specific objectives etc.
+This export is used to notify the entire group about specific objectives or events.
 
-(Uses qb-core notification system)
-
--- Stock Export -- 
+-- STOCK EXPORT -- 
 exports['qb-phone']:NotifyGroup(group, msg, type)
 
+-- PARAMETERS --
+- group (string): The identifier of the group.
+- message (string): The message to be sent to the group.
+- type (string): The type of notification.
+
 -- USAGE --
-local group = exports['qb-phone']:GetGroupByMembers(src)
-exports['qb-phone']:NotifyGroup(group, "Hey cuties :)", success)
+local group = exports['qb-phone']:GetGroupByMembers(source)
+exports['qb-phone']:NotifyGroup(group, "Hey cuties :)", 'success')
+
 ```
 
 ### pNotifyGroup
 
 ```
-An export used to Notify the entire group about a specific objective.
+This export is used to notify the entire group about a specific objective, utilizing the built-in Phone notification type.
 
 (Uses the build in Phone notification type)
 
@@ -37,10 +45,18 @@ https://fontawesome.com/v5/search?o=r&m=free
 -- Stock Export -- 
 exports['qb-phone']:pNotifyGroup(group, header, msg, icon, colour, length)
 
+-- PARAMETERS --
+- group (string): The identifier of the group.
+- header (string): The header/title of the notification.
+- msg (string): The detailed message for the notification.
+- icon (string): The icon for the notification (FontAwesome icon class).
+- color (string or number): The color of the notification.
+- length (number): The duration of the notification in milliseconds.
+
 -- USAGE --
-local group = exports['qb-phone']:GetGroupByMembers(src)
+local group = exports['qb-phone']:GetGroupByMembers(source)
 local message = "Head to the location marked and pick up trash!"
-exports['qb-phone']:pNotifyGroup(group, "Garbage Job", message, "fas fa-recycle", #008FFF, 7500)
+exports['qb-phone']:pNotifyGroup(group, "Garbage Job", msg, "fas fa-recycle", "#008FFF", 7500)
 ```
 
 ### CreateBlipForGroup
@@ -54,16 +70,21 @@ https://docs.fivem.net/docs/game-references/blips/
 -- Stock Export -- 
 exports['qb-phone']:CreateBlipForGroup(group, name, data)
 
+-- PARAMETERS --
+- group (string): The identifier of the group.
+- name (string): The name/identifier for the blip.
+- data (table): The data table containing blip details.
+
 -- USAGE --
 Do not copy paste this as the blip table might be broken only this as a reference
 
 local group = exports['qb-phone']:GetGroupByMembers(src)
 local blip = {
-    -- NOT YOU CAN ONLY USE ONE OF ENTITY NETID RADIUS AS THEY ALL DO THE SAME
+    -- NOTE YOU CAN ONLY USE ONE OF ENTITY NETID RADIUS AS THEY ALL DO THE SAME
     -- Picking none of these 3 will make it a normal blip by default
     entity = 9421, -- Use this if you have an entity spawned server side
-    netId = 9421, -- Use this if you have a entity server side and u got their netId
-    radius = 200, -- How big do u want the radius of the blip to be
+    netId = 9421, -- Use this if you have a entity server side and you have the netId
+    radius = 200, -- How big do you want the radius of the blip to be
     
     coords = vector4(231, 244, 92, 1.41) -- Just the coords for the blip
     color = 49, -- just a red colour
@@ -88,6 +109,10 @@ An export to remove blips across all group members
 -- Stock Export -- 
 exports['qb-phone']:RemoveBlipForGroup(group, name)
 
+-- PARAMETERS --
+- group (string): The identifier of the group.
+- name (string): The name/identifier for the blip to be removed.
+
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
 exports['qb-phone']:RemoveBlipForGroup(group, "Garbage")
@@ -104,6 +129,11 @@ An export to set the groups job to something specific.
 
 -- Stock Export -- 
 exports['qb-phone']:setJobStatus(group, status, stages)
+
+-- PARAMETERS --
+- group (string): The identifier of the group.
+- status (string): The name/identifier of the job status.
+- stages (table): A table containing stages for the job.
 
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
@@ -127,6 +157,9 @@ An export to get the current job the group is doing
 -- Stock Export -- 
 exports['qb-phone']:getJobStatus(group)
 
+-- PARAMETERS --
+- group (string): The identifier of the group.
+
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
 local job = exports["qb-phone"]:getJobStatus(group)
@@ -140,6 +173,9 @@ An export to reset the current groups job status to be WAITING.
 
 -- Stock Export -- 
 exports['qb-phone']:resetJobStatus(group)
+
+-- PARAMETERS --
+- group (string): The identifier of the group.
 
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
@@ -159,6 +195,9 @@ If the player has no group it will return nil.
 -- Stock Export -- 
 exports['qb-phone']:GetGroupByMembers(src)
 
+-- PARAMETERS --
+- src (number): The source ID of the player.
+
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
 print(group) -- Will either print the group ID or print nil.
@@ -171,6 +210,9 @@ An export to get all the group members source ID
 
 -- Stock Export -- 
 exports['qb-phone']:getGroupMembers(group)
+
+-- PARAMETERS --
+- group (string): The identifier of the group.
 
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
@@ -187,6 +229,9 @@ This can be used if u want players to be a specific number to start a job.
 
 -- Stock Export -- 
 exports['qb-phone']:getGroupSize(group)
+
+-- PARAMETERS --
+- group (string): The identifier of the group.
 
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
@@ -205,11 +250,33 @@ This can be used to make sure only the group leader can start a job.
 -- Stock Export -- 
 exports['qb-phone']:GetGroupLeader(group)
 
+-- PARAMETERS --
+- group (string): The identifier of the group.
+
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
 local leader = exports['qb-phone']:GetGroupLeader(group)
 
 print(leader) -- Will print the group leader source ID
+```
+
+### isGroupLeader
+
+```
+An export to check if a player is the group leader
+
+-- Stock Export -- 
+exports['qb-phone']:isGroupLeader(group)
+
+-- PARAMETERS --
+- src (number): The source ID of the player.
+- group (string): The identifier of the group.
+
+-- USAGE --
+local group = exports['qb-phone']:GetGroupByMembers(src)
+local leader = exports['qb-phone']:isGroupLeader(src, group)
+
+print(leader) -- Will print true if the source ID is the group leader
 ```
 
 ### DestroyGroup
@@ -219,6 +286,9 @@ An export to destroy a group.
 
 -- Stock Export -- 
 exports['qb-phone']:DestroyGroup(group)
+
+-- PARAMETERS --
+- group (string): The identifier of the group.
 
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
@@ -232,6 +302,10 @@ An export to remove a certain player based off their sourceID from a group
 
 -- Stock Export -- 
 exports['qb-phone']:RemovePlayerFromGroup(src, group)
+
+-- PARAMETERS --
+- src (number): The source ID of the player.
+- group (string): The identifier of the group.
 
 -- USAGE --
 local group = exports['qb-phone']:GetGroupByMembers(src)
@@ -248,6 +322,11 @@ This eventhandler here can be used to remove groups from server sided events.
 Usefull to avoid glithces and bugs if someone crashes etc.
 
 AddEventHandler('qb-phone:server:GroupDeleted', function(group, players)
+    -- Parameters:
+    --   - group (string): The identifier of the deleted group.
+    --   - players (table): A table containing the source IDs of players in the deleted group.
+    
+    -- Perform server-side cleanup or adjustments based on the deleted group.
     print(group, json.encode(players))
 end)
 ```

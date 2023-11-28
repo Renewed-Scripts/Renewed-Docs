@@ -1,4 +1,4 @@
-# 🪙 Crypto Exports
+# 🪙 Crypto Exports (Server Side)
 
 {% hint style="info" %}
 Here you can find all exports related to Crypto within the phone!
@@ -7,36 +7,45 @@ Here you can find all exports related to Crypto within the phone!
 ### RemoveCrypto
 
 ```
-This export can be used to remove crypto from an user.
+This export is used to remove crypto from a user.
 
 -- STOCK EXPORT -- 
-exports['qb-phone']:RemoveCrypto(src, type, amount)
+exports['qb-phone']:RemoveCrypto(source, type, amount)
+
+-- PARAMETERS --
+- source (number): The player source ID.
+- type (string): The type of crypto to be removed.
+- amount (number): The amount of crypto to be removed.
 
 -- USAGE --
-local src = source
-local success = exports['qb-phone']:RemoveCrypto(src, "gne", 50)
+local source = source
+local success = exports['qb-phone']:RemoveCrypto(source, "gne", 50)
 print(success)
 
-If the export could remove the crypto then success will return true otherwise false
+If the export successfully removes the crypto, the `success` variable will be true; otherwise, it will be false.
 ```
 
 ### hasEnough
 
 ```
-This export is to check if a user has enough crypto for something
+This export is used to check if a user has enough crypto for a specific purpose.
 
-This one shouldnt really be used for that much since its build
-into the remove crypto function but can be usefull for niché things
+Note: This function is mainly for niche use cases, as the removal function already includes this check.
 
 -- STOCK EXPORT -- 
-exports['qb-phone']:hasEnough(src, type, amount)
+exports['qb-phone']:hasEnough(source, type, amount)
+
+-- PARAMETERS --
+- source (number): The player source ID.
+- type (string): The type of crypto to check.
+- amount (number): The amount of crypto needed.
 
 -- USAGE --
-local src = source
-local success = exports['qb-phone']:hasEnough(src, "gne", 50)
+local source = source
+local success = exports['qb-phone']:hasEnough(source, "gne", 50)
 print(success)
 
-If you have enough crypto success will be true otherwise false
+If the user has enough crypto, the `success` variable will be true; otherwise, it will be false.
 ```
 
 ### AddCrypto
@@ -45,9 +54,14 @@ If you have enough crypto success will be true otherwise false
 This export is used to add crypto to a player.
 
 -- STOCK EXPORT -- 
-exports['qb-phone']:AddCrypto(src, type, amount)
+exports['qb-phone']:AddCrypto(source, type, amount)
+
+-- PARAMETERS --
+- source (number): The player source ID.
+- type (string): The type of crypto to be added.
+- amount (number): The amount of crypto to be added.
 
 -- USAGE --
-local src = source
-exports['qb-phone']:AddCrypto(src, "gne", 50)
+local source = source
+exports['qb-phone']:AddCrypto(source, "gne", 50)
 ```

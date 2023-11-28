@@ -14,7 +14,13 @@ Here you can find all the useful Exports and NetEvents used with the phone.
 [twitter-exports.md](twitter-exports.md)
 {% endcontent-ref %}
 
+{% content-ref url="employment-exports.md" %}
+[employment-exports.md](employment-exports.md)
+{% endcontent-ref %}
 
+{% content-ref url="notifications-exports.md" %}
+[notifications-exports.md](notifications-exports.md)
+{% endcontent-ref %}
 
 
 
