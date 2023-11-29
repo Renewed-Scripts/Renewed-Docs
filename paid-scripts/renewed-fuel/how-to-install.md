@@ -73,5 +73,16 @@ timingchain = {
 * If you want to use native audio for when picking/putting nozzles and fueling vehicles download this resource: [https://github.com/Renewed-Scripts/Renewed-Audiobank](https://github.com/Renewed-Scripts/Renewed-Audiobank)
 * Make sure to start it in the server.cfg before Renewed-Fuel
 
+
+
+### Step 6 (optional)
+
+* If you want players to be able to purchase stations without admin intervention add this to your server.cfg
+
+```properties
+# Make fuel stations purchaseable by players
+setr fuel_buystations true
+```
+
 And that is all for installation!
 
