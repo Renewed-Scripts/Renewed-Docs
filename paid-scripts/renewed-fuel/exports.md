@@ -59,3 +59,20 @@ local vehicle = GetVehiclePedIsIn(GetPlayerPed(source))
 exports['Renewed-Fuel']:SetFuel(vehicle, amount, fuelType) 
 ```
 
+
+
+### Gas Station exports
+
+Get the gas station tank storage
+
+```lua
+local Storage = exports['Renewed-Fuel']:GetStorage(StationId, tankId) 
+-- Station ID is the ID in the db, the tankId, is 1-4 depending on how many tanks the station have 
+```
+
+Set the gas station tank storage
+
+```lua
+exports['Renewed-Fuel']:SetStorage(StationId, tankId, amount, fuelType)
+-- Station ID is the ID in the db, tankId is 1-4 depending how many tanks the station have
+```
