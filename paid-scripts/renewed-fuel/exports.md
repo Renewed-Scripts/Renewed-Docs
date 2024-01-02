@@ -27,7 +27,7 @@ end
 Export: exports\['Renewed-Fuel']:GetFuel(vehicleId) -- (Not recommended)
 
 ```lua
-local fuel = exports['Renewed-Fuel']:GetFuel(cache.vehicle) -- ox lib example
+local fuel, fuelType = exports['Renewed-Fuel']:GetFuel(cache.vehicle) -- ox lib example
 ```
 
 ### Server
@@ -37,6 +37,7 @@ Statebag: Entity(vehicleId).state.fuel
 ```lua
 local vehicle = GetVehiclePedIsIn(GetPlayerPed(source))
 local fuel = Entity(vehicle).state.fuel
+local fuelType = Entity(vehicle).state.fuelType
 ```
 
 ## Setters
@@ -47,7 +48,7 @@ Export: exports\['Renewed-Fuel']:SetFuel(vehicleId)
 
 ```lua
 exports['Renewed-Fuel']:SetFuel(cache.vehicle, amount, fuelType) 
--- fueltype defaults to 86 if nil
+-- fueltype defaults to current fuelType or 86 if nil
 ```
 
 ### &#x20;Server
