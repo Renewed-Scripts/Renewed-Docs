@@ -21,4 +21,13 @@ exports['Renewed-Vehiclekeys']:hasKey(source, plate)
 
 -- Adds a key to the specified player
 exports['Renewed-Vehiclekeys']:addKey(source, plate)
+
+
+-- statebag
+
+-- Sets the vehicle locked or unlocked
+Entity(entity).state:set('vehicleLock', {
+    lock = 1 -- 1 | unlocked | 2 locked
+    sound = true -- true | false
+}, true)
 </code></pre>
