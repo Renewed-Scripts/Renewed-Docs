@@ -14,20 +14,47 @@ Statebag: Entity(vehicleId).state.fuel
 local vehicle = cache.vehicle -- Ox Lib example
 local fuel = Entity(vehicle).state.fuel
 
--- Optimized way (Use this if you need to get vehicle fuels in LOOPS)
-local function enteredCar()
-    local vehicle = cahe.vehicle
-    local state = Entity(vehicle).state
-    while true do
-        print(state.fuel)
+-- Optimized statebags method (not recommended in loops)
+lib.onCache('vehicle', function(vehicle)
+    if not vehicle then
+        return
     end
-end
+
+    local state = Entity(cache.vehicle).state
+    print(state.fuel)
+end)
+
+-- Best way
+lib.onCache('vehicle', function(vehicle)
+    if not vehicle then
+        return
+    end
+
+    SetTimeout(0, function()
+        while cache.vehicle do
+            print(GetVehicleFuelLevel(cache.vehicle))
+            Wait(100)
+        end
+    end)
+end)
 ```
 
 Export: exports\['Renewed-Fuel']:GetFuel(vehicleId) -- (Not recommended)
 
 ```lua
 local fuel, fuelType = exports['Renewed-Fuel']:GetFuel(cache.vehicle) -- ox lib example
+```
+
+```lua
+local fuel = GetVehicleFuelLevel(vehicle) -- Recommended for huds etc.
+```
+
+#### isElectric
+
+Useful to check if the vehicle is an electric car without storing additional useless information in other resoruce
+
+```lua
+local isElectric = exports['Renewed-Fuel']:isElectric(cache.vehicle)
 ```
 
 ### Server

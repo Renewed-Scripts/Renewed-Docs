@@ -84,5 +84,21 @@ timingchain = {
 setr fuel_buystations true
 ```
 
+### Step 7 (optional with Renewed-Vehiclekeys)
+
+* If you want vehicles to not be started when they are out of fuel, do as followed (example taken from Renewed-Vehiclekeys)
+
+```lua
+if GetResourceState('Renewed-Fuel') ~= 'missing' then
+    local fuel = GetVehicleFuelLevel(cache.vehicle)
+
+    if fuel <= 0 then
+        return notify("Vehicle can't be operated", 'error')
+    end
+end
+```
+
+
+
 And that is all for installation!
 
