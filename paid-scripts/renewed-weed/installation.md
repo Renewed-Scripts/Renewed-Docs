@@ -31,8 +31,6 @@ description: >-
 ['wetweed'] = {
 	label = 'Wet Bud',
 	weight = 0,
-	decay = true,
-	degrade = 1200, -- 20 hours
 },
 
 ['driedweed'] = {
@@ -45,6 +43,24 @@ description: >-
 				exports['Renewed-Weed']:makeBrick(slot)
 			end
 		}
+	}
+},
+
+['dryingrack'] = {
+	label = 'Drying Rack',
+	weight = 2500,
+	consume = 0,
+	server = {
+		export = 'Renewed-Weed.placeDryingRack'
+	}
+},
+
+['dryingrackadvanced'] = {
+	label = 'Advanced Drying Rack',
+	weight = 5000,
+	consume = 0,
+	server = {
+		export = 'Renewed-Weed.placeDryingRack'
 	}
 },
 
@@ -89,137 +105,7 @@ description: >-
 
 * Copy the images inside Renewed-Weed/images and paste them into ox\_inventory/web/images
 
-
-
 ### Step 3
-
-*   Headover to ox\_inventory/modules/inventory/server.lua and find the function&#x20;
-
-    ```lua
-    local function prepareInventorySave(inv, buffer, time)
-    ```
-* now replace that ENTIRE function with this
-
-```lua
-local function prepareInventorySave(inv, buffer, time)
-    local shouldSave = not inv.datastore and inv.changed
-    local n = 0
-
-    for k, v in pairs(inv.items) do
-		local decayed, newItem = Items.UpdateDurability(inv, v, Items(v.name), nil, time)
-
-        if (not decayed or decayed and newItem) and shouldSave then
-            n += 1
-            buffer[n] = {
-                name = newItem and newItem.name or v.name,
-                count = newItem and newItem.count or v.count,
-                slot = k,
-                metadata = newItem and next(newItem.metadata) and newItem.metadata or next(v.metadata) and v.metadata or nil
-            }
-        end
-	end
-
-    if not shouldSave then return end
-
-    local data = next(buffer) and json.encode(buffer) or nil
-    inv.changed = false
-    table.wipe(buffer)
-
-    if inv.player then
-        if shared.framework == 'esx' then return end
-
-        return 1, { data, inv.owner }
-    end
-
-    if inv.type == 'trunk' then
-        return 2, { data, inv.dbId }
-    end
-
-    if inv.type == 'glovebox' then
-        return 3, { data, inv.dbId }
-    end
-
-    return 4, { data, inv.owner and tostring(inv.owner) or '', inv.dbId }
-end
-```
-
-### Step 3
-
-* Headover to ox\_inventory/items/server.lua around line 418 and find this function
-
-```lua
-function Items.UpdateDurability(inv, slot, item, value, ostime)
-    local durability = slot.metadata.durability
-
-    if not durability then return end
-
-    if value then
-        durability = value
-    elseif ostime and durability > 100 and ostime >= durability then
-        durability = 0
-    end
-
-    if item.decay and durability == 0 then
-        return Inventory.RemoveItem(inv, slot.name, slot.count, nil, slot.slot)
-    end
-
-    if slot.metadata.durability == durability then return end
-
-    inv.changed = true
-    slot.metadata.durability = durability
-
-    inv:syncSlotsWithClients({
-        {
-            item = slot,
-            inventory = inv.id
-        }
-    }, { left = inv.weight }, true)
-end
-```
-
-Then replace that function with this
-
-```lua
-function Items.UpdateDurability(inv, slot, item, value, ostime)
-    local durability = slot.metadata.durability or value
-
-    if not durability then return end
-
-    if value then
-        durability = value
-    elseif ostime and durability > 100 and ostime >= durability then
-        durability = 0
-    end
-
-	if item.decay and durability == 0 then
-		local success = Inventory.RemoveItem(inv, slot.name, slot.count, nil, slot.slot)
-		local newItem
-
-		if success and slot.name == 'wetweed' then
-			local weight = slot.metadata?.weight or 100
-			local amount = math.floor(weight / 100)
-			success = Inventory.AddItem(inv, 'driedweed', amount, { strain = slot.metadata?.strain, strainQuality = slot.metadata?.strainQuality }, slot.slot)
-			newItem = {name = 'driedweed', count = amount, metadata = { strain = slot.metadata?.strain, strainQuality = slot.metadata?.strainQuality }}
-		end
-
-		return success, newItem
-    end
-
-    if slot.metadata.durability == durability then return end
-
-    inv.changed = true
-    slot.metadata.durability = durability
-
-    inv:syncSlotsWithClients({
-        {
-            item = slot,
-            inventory = inv.id
-        }
-    }, true)
-end
-```
-
-### Step 4
 
 * Run the SQL file inside of Renewed-Weed!
 
