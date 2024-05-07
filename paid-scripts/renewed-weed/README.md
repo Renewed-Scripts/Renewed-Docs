@@ -24,7 +24,7 @@ description: >-
 * 2 Types of seeds (female/male)
 * Create unlimited strains
 * Strain Quality
-* Stash/inventory drying, your weed will start drying up and turn into dried weed over configurable amount of time.
+* Placeable drying rack for the drying process, your weed will start drying up and turn into dried weed over configurable amount of time.
 * Watering/Fertilizing, with prop/particle support.
 * Wateringcan item with realistic water filling.
 * Comes with joint/bagging/brick crafting.
